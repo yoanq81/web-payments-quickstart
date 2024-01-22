@@ -49,6 +49,14 @@ Define `SQUARE_ACCESS_TOKEN` with your **Sandbox** Access Token from the Develop
 SQUARE_ACCESS_TOKEN=eX@mpl3_t0k3n
 ```
 
+Copy `./public/examples/utils/index.example.js` to `./public/examples/utils/index.js`
+
+```sh
+cp ./public/examples/utils/index.example.js ./public/examples/utils/index.js
+```
+
+Define `appId` and `locationId` with your **Sandbox** or **Production** information.
+
 Restart your server to use this new value.
 
 _Remember: Do not add your access tokens to git!_
