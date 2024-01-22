@@ -25,21 +25,23 @@
           verificationToken,
           idempotencyKey: window.crypto.randomUUID(),
         });
+        console.log(body);
 
-        const paymentResponse = await fetch('/payment', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body,
-        });
+        // const paymentResponse = await fetch('/payment', {
+        //   method: 'POST',
+        //   headers: {
+        //     'Content-Type': 'application/json',
+        //   },
+        //   body,
+        // });
+        return 'OK';
 
-        if (paymentResponse.ok) {
-          return paymentResponse.json();
-        }
+        // if (paymentResponse.ok) {
+        //   return paymentResponse.json();
+        // }
 
-        const errorBody = await paymentResponse.text();
-        throw new Error(errorBody);
+        // const errorBody = await paymentResponse.text();
+        // throw new Error(errorBody);
       }
 
       async function tokenize(paymentMethod) {
@@ -138,7 +140,7 @@
             );
             displayPaymentResults('SUCCESS');
 
-            console.debug('Payment Success', paymentResults);
+            // console.debug('Payment Success', paymentResults);
           } catch (e) {
             cardButton.disabled = false;
             displayPaymentResults('FAILURE');
