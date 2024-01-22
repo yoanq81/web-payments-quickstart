@@ -1,6 +1,9 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="utf-8" />
+    <title>Square Apple Payment</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="/app.css" rel="stylesheet" />
     <style>
       #apple-pay-button {
@@ -8,6 +11,7 @@
         width: 100%;
         display: inline-block;
         -webkit-appearance: -apple-pay-button;
+        appearance: -apple-pay-button;
         -apple-pay-button-type: plain;
         -apple-pay-button-style: black;
       }
@@ -16,10 +20,9 @@
       type="text/javascript"
       src="https://sandbox.web.squarecdn.com/v1/square.js"
     ></script>
-    <script>
-      const appId = '{APPLICATION_ID}';
-      const locationId = '{LOCATION_ID}';
 
+    <script type="text/javascript" src="./utils/index.js"></script>
+    <script>
       async function initializeCard(payments) {
         const card = await payments.card();
         await card.attach('#card-container');

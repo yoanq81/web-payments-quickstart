@@ -9,3 +9,4 @@ node_modules/
 .eslintcache
 .nyc_output
 coverage
+public/examples/utils/index.js

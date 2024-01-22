@@ -110,6 +110,7 @@ button {
   border-radius: 5px;
   cursor: pointer;
   border-style: none;
+  -webkit-user-select: none;
   user-select: none;
   outline: none;
   font-size: 16px;
@@ -204,4 +205,8 @@ button:disabled {
 
 #afterpay-button {
   height: 40px;
+}
+
+.margint-0 {
+  margin-top: 0;
 }
